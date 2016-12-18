@@ -13,6 +13,8 @@ Currently the application will only:
 
 ## To-Do
 The todo list is obviously quite large at this point but some of the stuff to add would be:
+- Implement config file
+- Configurable Bridge IP address
 - Control hue and saturation of each light
 - Scheduling
 - Too many other things to list right now
