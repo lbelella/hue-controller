@@ -11,6 +11,12 @@ Currently the application will only:
 - phue (https://github.com/studioimaginaire/phue)
 - pyqt4
 
+## To-Do
+The todo list is obviously quite large at this point but some of the stuff to add would be:
+- Control hue and saturation of each light
+- Scheduling
+- Too many other things to list right now
+
 ##Acknowledgments
 
 Thanks to [Nathanaël Lécaudé](https://github.com/natcl) and https://github.com/studioimaginaire for the phue library!
