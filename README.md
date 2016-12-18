@@ -8,6 +8,7 @@ Currently the application will only:
 - Clicking a button will toggle the on/off state of the light
 
 ## Requirements
+- Python 3
 - phue (https://github.com/studioimaginaire/phue)
 - pyqt4
 
