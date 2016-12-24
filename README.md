@@ -1,24 +1,27 @@
 # hue-controller
 Qt application for controlling Hue lights using the phue library.
 
-Currently the application will only:
+Currently the application will:
 - Connect to the Hue Bridge
 - Grab all of the lights from the Bridge by name
-- Create a list of buttons with the light names
+- Create a list of HueWidget objects and display them in a vertical layout
 - Clicking a button will toggle the on/off state of the light
+- The 3 horizontal sliders, in this order, control: hue, brightness, saturation
 
 ## Requirements
 - Python 3
 - phue (https://github.com/studioimaginaire/phue)
 - pyqt4
 
+## Known Issues
+The application only handles lights that have the colorspace set to 'hs'.
+
 ## To-Do
 The todo list is obviously quite large at this point but some of the stuff to add would be:
 - Implement config file
 - Configurable Bridge IP address
-- Control hue and saturation of each light
 - Scheduling
-- Too many other things to list right now
+- Handle 'ct' and 'xy' colorspaces
 
 ##Acknowledgments
 
