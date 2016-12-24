@@ -14,12 +14,14 @@ Currently the application will:
 - pyqt4
 
 ## Known Issues
-The application only handles lights that have the colorspace set to 'hs'.
+- The application expects that the inital setup with the phue library and the bridge has already been completed.
+- The application only handles lights that have the colorspace set to 'hs'.
 
 ## To-Do
 The todo list is obviously quite large at this point but some of the stuff to add would be:
 - Implement config file
 - Configurable Bridge IP address
+- Initial Bridge setup (pressing the button on the Bridge)
 - Scheduling
 - Handle 'ct' and 'xy' colorspaces
 
