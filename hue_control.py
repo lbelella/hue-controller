@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from PyQt4 import QtCore, QtGui
 import sys
 from phue import Bridge
@@ -8,9 +8,44 @@ class HueController():
     Small wrapper class around the phue Bridge object.
     """
     def __init__(self):
-        self.bridge = Bridge('192.168.2.102')
+        self.bridge = Bridge('10.0.0.210')
         self.bridge.connect()
         self.lights = self.bridge.get_light_objects()
+
+class HeaderWidget(QtGui.QWidget):
+    def __init__(self):
+        super(HeaderWidget, self).__init__()
+        self.initUi()
+    
+    def initUi(self):
+        # Layout our controls horizontally
+        self.layout = QtGui.QHBoxLayout()
+        self.layout.addStretch(1)
+        
+        # Light Name
+        self.lblLightName = QtGui.QLabel("Light Name")
+        self.lblLightName.setMinimumSize(200, 1)
+        
+        # Color
+        self.lblColor = QtGui.QLabel("Color")
+        self.lblColor.setMinimumSize(200, 1)
+        
+        # Brightness
+        self.lblBrightness = QtGui.QLabel("Brightness")
+        self.lblBrightness.setMinimumSize(80, 1)
+        
+        # Saturation slider
+        self.lblSat = QtGui.QLabel("Saturation")
+        self.lblSat.setMinimumSize(80, 1)
+        
+        # Add the controls to the horizontal layout
+        self.layout.addWidget(self.lblLightName)
+        self.layout.addWidget(self.lblColor)
+        self.layout.addWidget(self.lblBrightness)
+        self.layout.addWidget(self.lblSat)
+        
+        # Set the layout for the widget to the horizontal layout
+        self.setLayout(self.layout)
         
 class HueWidget(QtGui.QWidget):
     def __init__(self, light):
@@ -114,6 +149,9 @@ class HueControlApp(QtGui.QMainWindow):
         self.mainLayout = QtGui.QVBoxLayout()
         self.mainLayout.addStretch(1)
         
+        header = HeaderWidget()
+        self.mainLayout.addWidget(header)
+
         # Create a list of widgets using each light on the bridge
         widgets = [HueWidget(l) for l in self.hc.lights]
 
