@@ -6,7 +6,7 @@ Currently the application will:
 - Grab all of the lights from the Bridge by name
 - Create a list of HueWidget objects and display them in a vertical layout
 - Clicking a button will toggle the on/off state of the light
-- The 3 horizontal sliders, in this order, control: hue, brightness, saturation
+- Create 3 horizontal sliders, in this order, control: hue, brightness, saturation
 
 ## Requirements
 - Python 3
@@ -25,11 +25,11 @@ The todo list is obviously quite large at this point but some of the stuff to ad
 - Scheduling
 - Handle 'ct' and 'xy' colorspaces
 
-##Acknowledgments
+## Acknowledgments
 
 Thanks to [Nathanaël Lécaudé](https://github.com/natcl) and https://github.com/studioimaginaire for the phue library!
 
-##License
+## License
 
 MIT - http://opensource.org/licenses/MIT
 
