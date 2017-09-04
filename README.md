@@ -6,7 +6,7 @@ Currently the application will:
 - Grab all of the lights from the Bridge by name
 - Create a list of HueWidget objects and display them in a vertical layout
 - Clicking a button will toggle the on/off state of the light
-- Create 3 horizontal sliders, in this order, control: hue, brightness, saturation
+- Create 3 horizontal sliders in this order: hue, brightness and saturation
 
 ## Requirements
 - Python 3
